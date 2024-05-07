@@ -86,7 +86,7 @@ getFitnessGA <- function(weights){
   #Calculating portfolio returns 
   portfolio_return <- sum(weights * colMeans(stock_data))
   
-  #Calculating portfolio variance
+  #Calculating portfolio risk
   portfolio_risk <- sqrt(t(weights) %*% cov(stock_data) %*% weights)
   
   #Calculating Sharpe ratio
@@ -107,7 +107,7 @@ getFitness <- function(weights){
   #Calculating portfolio returns 
   portfolio_return <- sum(weights * colMeans(stock_data))
   
-  #Calculating portfolio variance
+  #Calculating portfolio risk
   portfolio_risk <- sqrt(t(weights) %*% cov(stock_data) %*% weights)
   
   #Calculating Sharpe ratio
